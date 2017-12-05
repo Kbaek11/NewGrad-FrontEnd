@@ -1,2 +1,3 @@
-# NewGrad
-Website to apply for new grad job opportunities
+# comp426-project
+
+This is a test change to test out Slack GitHub integration
