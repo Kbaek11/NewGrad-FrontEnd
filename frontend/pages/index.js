@@ -1,15 +1,15 @@
 import fetch from 'isomorphic-unfetch';
 import Link from 'next/link';
+import Company from '../components/company.js';
 
 const Index = props => (
     <div className="hello">
+        <button>Open</button>
         <p>Hello World</p>
         <ul>
             {props.companies.map(({company}) => (
-                <li key={company.name}>
-                    <Link href={`/${company.name}`}>
-                        <a>{company.name}</a>
-                    </Link>
+                <li key={company.id}>
+                    <Company key={company.id} company={company} />
                 </li>
             ))}
         </ul>
