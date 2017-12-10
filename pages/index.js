@@ -40,7 +40,7 @@ class Index extends React.Component {
                 <button class = 'openButton' onClick={this.toggleOpen.bind(this)}>Open</button>
             <div class ="container">
                     {this.props.companies.map(company => {
-                        if (!company.status && !this.state.open) {
+                        if (company.status == '0' && !this.state.open) {
                             return;
                         }
                         var companyClasses = classNames({
