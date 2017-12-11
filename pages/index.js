@@ -52,7 +52,7 @@ class Index extends React.Component {
                         <h1> New Grad </h1>
                     </center>
                     <center>
-                        <p> New Grad is a ___</p>
+                        <p> New Grad is an innovative website designed to be a “one stop shop” for recent college graduates who are seeking jobs in the technology industry. Specifically aimed at software engineers, New Grad provides a job description, salary & benefits information, and valuable insight into each company’s interview process. Click the “open” button below to view the companies who are still accepting applications! </p>
                     </center>
                     <div class="wrapper">
                         <div class="inner button">
