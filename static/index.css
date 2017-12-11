@@ -7,7 +7,7 @@ p, h1, h2, h3{
 }
 
 body{
-	background-color: #ccc;
+	background-color: #C0C0C0;
 }
 
 nav{
@@ -22,10 +22,25 @@ nav li a{
 	color: white;
 }
 
+.column1{
+	float: left;
+	width: 40%;
+}
+
+.lorum{
+	float: left;
+	width: 60%;
+}
+
 .circle:before{
 	content: ' \25CF';
 	font-size: 100%;
 	color: #1ABC9C;
+}
+
+.label{
+	color: #006F59;
+
 }
 
 .company-card{
@@ -62,6 +77,12 @@ nav li a{
 }
 
 .openButton:hover{
+	background: #22313F;
+    color: #fff;
+    text-decoration: none;
+}
+
+.openButton.activeButton{
 	background: #1ABC9C;
     color: #fff;
     text-decoration: none;
