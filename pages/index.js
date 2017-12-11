@@ -3,6 +3,7 @@ import React from 'react';
 import fetch from 'isomorphic-unfetch';
 import Link from 'next/link';
 import Company from '../components/company.js';
+import Head from '../components/head.js';
 
 class Index extends React.Component {
     static async getInitialProps() {
@@ -26,22 +27,33 @@ class Index extends React.Component {
     }
 
     render() {
+        function classNames(classes){
+            return Object.entries(classes)
+            .filter(([key, value]) => value)
+            .map(([key, value]) => key)
+            .join(' ');
+        }
         return (
-            <div className="hello">
-                <button onClick={this.toggleOpen.bind(this)}>Open</button>
-                <p>Hello World</p>
-                <ul>
+            <div className="body">
+                <Head>
+                </Head>
+                <button class = 'openButton' onClick={this.toggleOpen.bind(this)}>Open</button>
+            <div class ="container">
                     {this.props.companies.map(company => {
                         if (!company.status && !this.state.open) {
                             return;
                         }
+                        var companyClasses = classNames({
+                            'company-card': true,
+                            'open' : company.status
+                        })
                         return (
-                            <li key={company.id}>
-                                <Company key={company.id} company={company} />
-                            </li>
+                            <div className = {companyClasses} key={company.id}>
+                                <Company key={company.id} company={company}/>
+                            </div>
                         );
                     })}
-                </ul>
+                </div>
             </div>
         );
     }

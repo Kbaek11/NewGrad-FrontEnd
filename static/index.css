@@ -1,0 +1,26 @@
+.body{
+	background-color: #ccc;
+}
+
+.company-card{
+	background-color: white;
+	padding-top: 10px;
+	box-shadow: 3px 3px 3px #dddddd;
+	width: 33.3333333333%;
+	clear: none;
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+	box-sizing: border-box;
+	text-align: center;
+}
+.company-card a{
+	font-size: 200%;
+	color: black;
+	text-decoration: none;
+
+}
+
+.openButton{
+	
+}
