@@ -1,7 +1,11 @@
 import Link from 'next/link';
 
 export default props => (
-    <Link href={`/${props.company.name}`}>
+    <div>
+    <h3><Link href={`/${props.company.name}`}>
         <a>{props.company.name}</a>
-    </Link>
+    </Link></h3>
+    <span class = "circle"></span>
+</div>
 );
+

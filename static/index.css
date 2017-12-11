@@ -1,3 +1,7 @@
+*{
+	font-family: 'Raleway', sans-serif;
+}
+
 p, h1, h2, h3{
 	color: #22313F;
 }
@@ -10,7 +14,18 @@ nav{
 	text-decoration: none;
 	list-style: none;
 	width: 100%;
-	background-color: blue;
+	background-color: #22313F;
+}
+
+nav li a{
+	text-decoration: none;
+	color: white;
+}
+
+.circle:before{
+	content: ' \25CF';
+	font-size: 100%;
+	color: #1ABC9C;
 }
 
 .company-card{
@@ -50,12 +65,15 @@ nav{
 	background: #1ABC9C;
     color: #fff;
     text-decoration: none;
-};
+}
 
 .wrapper{
-	display: flex;
 	width: 100%;
 	height: 100%;
+}
+
+.wrapper.background{
+	display:block;
 }
 
 .inner{

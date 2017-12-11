@@ -33,6 +33,7 @@ class Index extends React.Component {
             .map(([key, value]) => key)
             .join(' ');
         }
+        var openClasses = classNames({openButton: true, activeButton: this.state.open})
         return (
             <div class = "wrapper background">
                 <div className="body">
@@ -44,9 +45,9 @@ class Index extends React.Component {
                     </nav>
                     <center><h1> New Grad </h1></center>
                     <center><p> New Grad is a ___</p></center>
-                    <div class = "wrapper">
-                    <div class = "inner button">
-                    <button class = 'openButton' onClick={this.toggleOpen.bind(this)}>Open</button>
+                    <div class= "wrapper">
+                    <div class= "inner button">
+                    <button class= {openClasses} onClick={this.toggleOpen.bind(this)}>Open</button>
                     </div>
                     </div>
             <div class = "wrapper">
