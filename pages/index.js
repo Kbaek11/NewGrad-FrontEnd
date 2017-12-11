@@ -34,25 +34,39 @@ class Index extends React.Component {
             .join(' ');
         }
         return (
-            <div className="body">
-                <Head>
-                </Head>
-                <button class = 'openButton' onClick={this.toggleOpen.bind(this)}>Open</button>
-            <div class ="container">
-                    {this.props.companies.map(company => {
-                        if (!company.status && !this.state.open) {
-                            return;
-                        }
-                        var companyClasses = classNames({
-                            'company-card': true,
-                            'open' : company.status
-                        })
-                        return (
-                            <div className = {companyClasses} key={company.id}>
-                                <Company key={company.id} company={company}/>
-                            </div>
-                        );
-                    })}
+            <div class = "wrapper background">
+                <div className="body">
+                    <Head>
+                    </Head>
+                        <nav>
+                        <li><a href="/"> Home </a>
+                        </li>
+                    </nav>
+                    <center><h1> New Grad </h1></center>
+                    <center><p> New Grad is a ___</p></center>
+                    <div class = "wrapper">
+                    <div class = "inner button">
+                    <button class = 'openButton' onClick={this.toggleOpen.bind(this)}>Open</button>
+                    </div>
+                    </div>
+            <div class = "wrapper">
+             <div class = "container inner">
+                        {this.props.companies.map(company => {
+                            if (!company.status && !this.state.open) {
+                                return;
+                            }
+                            var companyClasses = classNames({
+                                'company-card': true,
+                                'open' : company.status
+                            })
+                            return (
+                                <div className = {companyClasses} key={company.id}>
+                                    <Company key={company.id} company={company}/>
+                                </div>
+                            );
+                        })}
+                        </div>
+                    </div>
                 </div>
             </div>
         );

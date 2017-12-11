@@ -1,12 +1,24 @@
-.body{
+p, h1, h2, h3{
+	color: #22313F;
+}
+
+body{
 	background-color: #ccc;
+}
+
+nav{
+	text-decoration: none;
+	list-style: none;
+	width: 100%;
+	background-color: blue;
 }
 
 .company-card{
 	background-color: white;
 	padding-top: 10px;
+	padding-bottom: 10px;
 	box-shadow: 3px 3px 3px #dddddd;
-	width: 33.3333333333%;
+	width: 23%;
 	clear: none;
 	margin-left: 10px;
 	margin-top: 10px;
@@ -16,11 +28,63 @@
 }
 .company-card a{
 	font-size: 200%;
-	color: black;
+	color: #22313F;
 	text-decoration: none;
-
 }
 
 .openButton{
-	
+	border: 1px #1ABC9C solid;
+	color: #1ABC9C;
+	display: inline-block;
+	border-radius: 20px;
+	padding: 4px 14px;
+	margin: 6px;
+	cursor: pointer;
+	text-decoration: none;
+	width: 7em;
+	height: 2.5em;
+	font-size: 18pt;
+}
+
+.openButton:hover{
+	background: #1ABC9C;
+    color: #fff;
+    text-decoration: none;
+};
+
+.wrapper{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.inner{
+	display: flex;
+	justify-content: center;
+	flex-basis: auto;
+	flex-grow: 0;
+	flex-shrink: 0;
+    /*max-width: 50%;*/
+}
+
+.inner.button{
+	margin-left: 48%;
+	margin-right: 48%;
+}
+
+.companyPage .name{
+
+	font-size: 200%;
+
+}
+
+.companyPage.wrapper .inner{
+	justify-content: left;
+	margin-left: 10%;
+
+}
+
+.companyPage p{
+	display: block;
+	width: 100%;
 }
